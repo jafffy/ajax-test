@@ -13,7 +13,8 @@ $(document).ready(function() {
          $("button").click(function ()
          {
            $.get("http://www.json-generator.com/api/json/get/caVKFztXiq?indent=2", function(data, status){
-             document.write(data[0]["_id"]);
+		   	 document.write(data[0]["_id"] + "<br>");
+			 document.write(data[0]["index"]);
            });
          });
 });
