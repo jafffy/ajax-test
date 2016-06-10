@@ -7,20 +7,25 @@
      src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   <script type = "text/javascript">
-     $(document).ready(function(){document.write(`
-       Hello, World!
 
-       <form class="" action="index.html" method="post">
-         <label for="name">이름을 입력하세요 : </label>
-         <input type="text" name="name" placeholder="name">
-         <br>
-         <input type="radio" name="country" value="korea">
-         <input type="radio" name="country" value="japan">
-         <input type="submit" value="전송">
-       </form>
-       <h1>Hello</h1>`);});
+$(document).ready(function() {
+
+         $("button").click(function ()
+         {
+           $.get("http://www.json-generator.com/api/json/get/caVKFztXiq?indent=2", function(data, status){
+             document.write(data[0]["_id"]);
+           });
+         });
+});
+
   </script>
 </head>
 <body>
+  <div id="naver">
+    <h2> asdfasdf</h2>
+  </div>
+  <button>
+    go to naver
+  </button>
 </body>
 </html>
